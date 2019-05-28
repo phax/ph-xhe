@@ -1,0 +1,154 @@
+/**
+ * Copyright (C) 2019 Philip Helger (www.helger.com)
+ * philip[at]helger[dot]com
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *         http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.helger.xhe;
+
+import javax.annotation.Nonnull;
+import javax.annotation.concurrent.Immutable;
+
+import com.helger.commons.annotation.PresentForCodeCoverage;
+import com.helger.commons.annotation.ReturnsMutableCopy;
+import com.helger.commons.collection.impl.CommonsArrayList;
+import com.helger.commons.collection.impl.ICommonsList;
+import com.helger.commons.io.resource.ClassPathResource;
+import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
+import com.helger.xsds.xades132.CXAdES132;
+import com.helger.xsds.xades141.CXAdES141;
+import com.helger.xsds.xmldsig.CXMLDSig;
+
+/**
+ * Contains all the constants for XHE handling.
+ *
+ * @author Philip Helger
+ */
+@Immutable
+public final class CXHE10
+{
+  public static final String DEFAULT_PREFIX_UNQUALIFIED_DATA_TYPES = "udt";
+  public static final String NAMESPACE_URI_UNQUALIFIED_DATA_TYPES = "oasis-cefact-xhe-1.0-UnqualifiedDataTypes";
+
+  public static final String DEFAULT_PREFIX_QUALIFIED_DATA_TYPES = "qdt";
+  public static final String NAMESPACE_URI_QUALIFIED_DATA_TYPES = "oasis-cefact-xhe-1.0-QualifiedDataTypes";
+
+  public static final String DEFAULT_PREFIX_BASIC_COMPONENTS = "xhb";
+  public static final String NAMESPACE_URI_BASIC_COMPONENTS = "oasis-cefact-xhe-1.0-BasicComponents";
+
+  public static final String DEFAULT_PREFIX_EXTENSION_COMPONENTS = "ext";
+  public static final String NAMESPACE_URI_EXTENSION_COMPONENTS = "oasis-cefact-xhe-1.0-ExtensionComponents";
+
+  public static final String DEFAULT_PREFIX_AGGREGATE_COMPONENTS = "xha";
+  public static final String NAMESPACE_URI_AGGREGATE_COMPONENTS = "oasis-cefact-xhe-1.0-AggregateComponents";
+
+  public static final String DEFAULT_PREFIX_SERVICE_GROUP = "xhe";
+  public static final String NAMESPACE_URI_SERVICE_GROUP = "oasis-cefact-xhe-1.0-ExchangeHeaderEnvelope";
+
+  @Nonnull
+  private static ClassLoader _getCL ()
+  {
+    return CXHE10.class.getClassLoader ();
+  }
+
+  // Note: requires CCTS Schema Module
+  @Nonnull
+  public static ClassPathResource getXSDResourceUnqualifiedDataTypes ()
+  {
+    return new ClassPathResource ("/schemas/xhe10/fragments/XHE-UnqualifiedDataTypes-1.0.xsd", _getCL ());
+  }
+
+  // Note: requires UnqualifiedDataTypes
+  @Nonnull
+  public static ClassPathResource getXSDResourceQualifiedDataTypes ()
+  {
+    return new ClassPathResource ("/schemas/xhe10/fragments/XHE-QualifiedDataTypes-1.0.xsd", _getCL ());
+  }
+
+  // Note: requires QualifiedDataTypes, UnqualifiedDataTypes
+  @Nonnull
+  public static ClassPathResource getXSDResourceBasicComponents ()
+  {
+    return new ClassPathResource ("/schemas/xhe10/fragments/XHE-BasicComponents-1.0.xsd", _getCL ());
+  }
+
+  // Note: requires Xades 1.3.2, Xades 1.4.1
+  @Nonnull
+  public static ClassPathResource getXSDResourceExtensionContentDataType ()
+  {
+    return new ClassPathResource ("/schemas/xhe10/fragments/XHE-ExtensionContentDataType-1.0.xsd", _getCL ());
+  }
+
+  // Note: requires UnqualifiedDataTypes, BasicComponents,
+  // ExtensionContentDataType
+  @Nonnull
+  public static ClassPathResource getXSDResourceExtensionComponents ()
+  {
+    return new ClassPathResource ("/schemas/xhe10/fragments/XHE-ExtensionComponents-1.0.xsd", _getCL ());
+  }
+
+  @Nonnull
+  public static ClassPathResource getXSDResourcePayloadContentDataType ()
+  {
+    return new ClassPathResource ("/schemas/xhe10/fragments/XHE-PayloadContentDataType-1.0.xsd", _getCL ());
+  }
+
+  // Note: requires BasicComponents, PayloadContentDataType
+  @Nonnull
+  public static ClassPathResource getXSDResourceAggregateComponents ()
+  {
+    return new ClassPathResource ("/schemas/xhe10/fragments/XHE-AggregateComponents-1.0.xsd", _getCL ());
+  }
+
+  /**
+   * @return A list of all includes in the correct order. Never
+   *         <code>null</code>.
+   */
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllIncludes ()
+  {
+    return new CommonsArrayList <> (CCCTS.getXSDResource (),
+                                    getXSDResourceUnqualifiedDataTypes (),
+                                    getXSDResourceQualifiedDataTypes (),
+                                    getXSDResourceBasicComponents (),
+                                    CXMLDSig.getXSDResource (),
+                                    CXAdES132.getXSDResource (),
+                                    CXAdES141.getXSDResource (),
+                                    getXSDResourceExtensionComponents (),
+                                    getXSDResourceAggregateComponents ());
+  }
+
+  // Note: requires AggregateComponents, BasicComponents, ExtensionComponents,
+  // XMLDsig
+  @Nonnull
+  public static ClassPathResource getXSDXHE10 ()
+  {
+    return new ClassPathResource ("/schemas/xhe10/XHE-1.0.xsd", _getCL ());
+  }
+
+  @Nonnull
+  @ReturnsMutableCopy
+  public static ICommonsList <ClassPathResource> getAllXSDXHE10 ()
+  {
+    final ICommonsList <ClassPathResource> ret = getAllIncludes ();
+    ret.add (getXSDXHE10 ());
+    return ret;
+  }
+
+  @PresentForCodeCoverage
+  private static final CXHE10 s_aInstance = new CXHE10 ();
+
+  private CXHE10 ()
+  {}
+}
