@@ -116,7 +116,7 @@ public final class CXHE10
    */
   @Nonnull
   @ReturnsMutableCopy
-  public static ICommonsList <ClassPathResource> getAllIncludes ()
+  public static ICommonsList <ClassPathResource> getAllXSDIncludes ()
   {
     return new CommonsArrayList <> (CCCTS.getXSDResource (),
                                     getXSDResourceUnqualifiedDataTypes (),
@@ -141,7 +141,7 @@ public final class CXHE10
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDXHE10 ()
   {
-    final ICommonsList <ClassPathResource> ret = getAllIncludes ();
+    final ICommonsList <ClassPathResource> ret = getAllXSDIncludes ();
     ret.add (getXSDXHE10 ());
     return ret;
   }

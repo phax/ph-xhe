@@ -69,7 +69,7 @@ public final class CXHE10Test
   @Test
   public void testSchemaCreation1 ()
   {
-    final ICommonsList <ClassPathResource> aList = CXHE10.getAllIncludes ();
+    final ICommonsList <ClassPathResource> aList = CXHE10.getAllXSDIncludes ();
     aList.add (CXHE10.getXSDXHE10 ());
 
     final Schema aSchema = XMLSchemaCache.getInstance ().getFromCache (aList);
