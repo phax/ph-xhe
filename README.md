@@ -10,7 +10,7 @@ It requires at least Java 8 to be used.
 
 # News and noteworthy
 
-* v1.0.0 - Work in progress
+* v1.0.0 - 2019-05-28
     * Initial version
 
 # Maven usage
