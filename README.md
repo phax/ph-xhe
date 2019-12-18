@@ -10,6 +10,8 @@ It requires at least Java 8 to be used.
 
 # News and noteworthy
 
+* v1.0.1 - work in progress
+    * Updated to CS02 - no changes in XSD
 * v1.0.0 - 2019-05-28
     * Initial version
 

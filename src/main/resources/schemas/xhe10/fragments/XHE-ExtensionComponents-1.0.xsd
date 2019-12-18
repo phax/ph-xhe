@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           Exchange Header Envelope (XHE) 1.0 CS01
+  Library:           Exchange Header Envelope (XHE) 1.0 CS02
                      http://www.unece.org/cefact
-                     https://docs.oasis-open.org/bdxr/bdx-xhe/v1.0/cs01/
-  Release Date:      21 March 2019
+                     https://docs.oasis-open.org/bdxr/xhe/v1.0/cs02/
+  Release Date:      05 September 2019
   Module:            XHE-ExtensionComponents-1.0.xsd
   Generated on:      2017-10-31 17:00(UTC)
   Copyright (c) UN/CEFACT 2019. All Rights Reserved.
