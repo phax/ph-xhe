@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XHE xmlns="oasis-cefact-xhe-1.0-ExchangeHeaderEnvelope"
+     xmlns:xhb="oasis-cefact-xhe-1.0-BasicComponents"
+     xmlns:xha="oasis-cefact-xhe-1.0-AggregateComponents"
+     xmlns:ext="oasis-cefact-xhe-1.0-ExtensionComponents">
+  <xhb:XHEVersionID>1.0</xhb:XHEVersionID>
+  <xha:Header>
+    <xhb:ID>UUID1</xhb:ID>
+    <xhb:CreationDateTime>2020-02-02T20:34:00Z</xhb:CreationDateTime>
+    <xha:BusinessScope>
+      <xha:BusinessScopeCriterion>
+        <xhb:BusinessScopeCriterionTypeCode>DC-CountryCode</xhb:BusinessScopeCriterionTypeCode>
+        <xhb:BusinessScopeCriterionValue>AT</xhb:BusinessScopeCriterionValue>
+      </xha:BusinessScopeCriterion>
+      <xha:BusinessScopeCriterion>
+        <xhb:BusinessScopeCriterionTypeCode>DP-CountryCode</xhb:BusinessScopeCriterionTypeCode>
+        <xhb:BusinessScopeCriterionValue>PL</xhb:BusinessScopeCriterionValue>
+      </xha:BusinessScopeCriterion>
+    </xha:BusinessScope>
+    <xha:FromParty>
+      <xha:PartyIdentification>
+        <xhb:ID schemeID="iso6523-actorid-upis">9915:tooptest</xhb:ID>
+      </xha:PartyIdentification>
+    </xha:FromParty>
+    <!-- Mandatory -->
+    <xha:ToParty>
+      <xha:PartyIdentification>
+        <xhb:ID schemeID="iso6523-actorid-upis">9999:test</xhb:ID>
+      </xha:PartyIdentification>
+    </xha:ToParty>
+  </xha:Header>
+  <xha:Payloads>
+    <xha:Payload>
+      <!-- Signed by DC -->
+      <!-- e.g. fixed ID -->
+      <xhb:ID>step1</xhb:ID>
+      <xhb:ContentTypeCode>application/xml</xhb:ContentTypeCode>
+      <xhb:CustomizationID schemeID="toop-doctypeid-qns">urn:eu:toop:ns:dataexchange-1p40::Request##urn:eu.toop.request.registeredorganization::1.40</xhb:CustomizationID>
+      <xhb:ProfileID schemeID="toop-procid-agreement">urn:eu.toop.process.datarequestresponse</xhb:ProfileID>
+      <xhb:ValidationTypeCode>TOOP-EDM</xhb:ValidationTypeCode>
+      <xhb:ValidationVersionID>1.4.1</xhb:ValidationVersionID>
+      <xhb:InstanceEncryptionIndicator>false</xhb:InstanceEncryptionIndicator>
+      <xha:PayloadContent>
+        <!-- TOOP Request (step 1/4) -->
+        <toop:Request xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+          xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+          xmlns:toop="urn:eu:toop:ns:dataexchange-1p40"
+          xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2">
+          <toop:DocumentUniversalUniqueIdentifier schemeAgencyID="**DEFINED_BY_DC**">1f17a4fa-a905-4d9c-8191-97d1e76985df</toop:DocumentUniversalUniqueIdentifier>
+          ...
+        </toop:Request>  
+      </xha:PayloadContent>
+    </xha:Payload>
+    <xha:Payload>
+      <!-- Signed by TC -->
+      <!-- e.g. fixed ID -->
+      <xhb:ID>step2</xhb:ID>
+      <xhb:ContentTypeCode>application/xml</xhb:ContentTypeCode>
+      <xhb:CustomizationID schemeID="toop-doctypeid-qns">urn:eu:toop:ns:dataexchange-1p40::Request##urn:eu.toop.request.registeredorganization::1.40</xhb:CustomizationID>
+      <xhb:ProfileID schemeID="toop-procid-agreement">urn:eu.toop.process.datarequestresponse</xhb:ProfileID>
+      <xhb:ValidationTypeCode>TOOP-EDM</xhb:ValidationTypeCode>
+      <xhb:ValidationVersionID>1.4.1</xhb:ValidationVersionID>
+      <xhb:InstanceEncryptionIndicator>false</xhb:InstanceEncryptionIndicator>
+      <xha:PayloadContent>
+        <!-- TOOP Request (step 2/4) - with concept mapping -->
+        <toop:Request xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+          xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+          xmlns:toop="urn:eu:toop:ns:dataexchange-1p40"
+          xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2">
+          <toop:DocumentUniversalUniqueIdentifier schemeAgencyID="**DEFINED_BY_DC**">1f17a4fa-a905-4d9c-8191-97d1e76985df</toop:DocumentUniversalUniqueIdentifier>
+          ...
+        </toop:Request>  
+      </xha:PayloadContent>
+    </xha:Payload>
+    <xha:Payload>
+      <!-- Signed by DP -->
+      <!-- e.g. fixed ID -->
+      <xhb:ID>step3</xhb:ID>
+      <xhb:ContentTypeCode>application/xml</xhb:ContentTypeCode>
+      <xhb:CustomizationID schemeID="toop-doctypeid-qns">urn:eu:toop:ns:dataexchange-1p40::Response##urn:eu.toop.response.registeredorganization::1.40</xhb:CustomizationID>
+      <xhb:ProfileID schemeID="toop-procid-agreement">urn:eu.toop.process.datarequestresponse</xhb:ProfileID>
+      <xhb:ValidationTypeCode>TOOP-EDM</xhb:ValidationTypeCode>
+      <xhb:ValidationVersionID>1.4.1</xhb:ValidationVersionID>
+      <xhb:InstanceEncryptionIndicator>false</xhb:InstanceEncryptionIndicator>
+      <xha:PayloadContent>
+        <!-- TOOP Response (step 3/4) -->
+        <toop:Response xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+         xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+         xmlns:toop="urn:eu:toop:ns:dataexchange-1p40"
+         xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2">
+          <toop:DocumentUniversalUniqueIdentifier schemeAgencyID="**DEFINED_BY_DP**">2a69f3bc-a905-4d9c-8191-97d1e76985df</toop:DocumentUniversalUniqueIdentifier>
+          ...
+        </toop:Response>  
+      </xha:PayloadContent>
+    </xha:Payload>
+    <xha:Payload>
+      <!-- Signed by TC -->
+      <!-- e.g. fixed ID -->
+      <xhb:ID>step4</xhb:ID>
+      <xhb:ContentTypeCode>application/xml</xhb:ContentTypeCode>
+      <xhb:CustomizationID schemeID="toop-doctypeid-qns">urn:eu:toop:ns:dataexchange-1p40::Response##urn:eu.toop.response.registeredorganization::1.40</xhb:CustomizationID>
+      <xhb:ProfileID schemeID="toop-procid-agreement">urn:eu.toop.process.datarequestresponse</xhb:ProfileID>
+      <xhb:ValidationTypeCode>TOOP-EDM</xhb:ValidationTypeCode>
+      <xhb:ValidationVersionID>1.4.1</xhb:ValidationVersionID>
+      <xhb:InstanceEncryptionIndicator>false</xhb:InstanceEncryptionIndicator>
+      <xha:PayloadContent>
+        <!-- TOOP Response (step 4/4) - with concept mapping -->
+        <toop:Response xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+         xmlns:cct="urn:un:unece:uncefact:data:specification:CoreComponentTypeSchemaModule:2"
+         xmlns:toop="urn:eu:toop:ns:dataexchange-1p40"
+         xmlns:udt="urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2">
+          <toop:DocumentUniversalUniqueIdentifier schemeAgencyID="**DEFINED_BY_DP**">2a69f3bc-a905-4d9c-8191-97d1e76985df</toop:DocumentUniversalUniqueIdentifier>
+          ...
+        </toop:Response>  
+      </xha:PayloadContent>
+    </xha:Payload>
+  </xha:Payloads>
+</XHE>

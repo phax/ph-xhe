@@ -22,6 +22,8 @@ import static org.junit.Assert.assertNull;
 import java.io.File;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.helger.commons.io.file.FileSystemIterator;
 
@@ -32,9 +34,12 @@ import com.helger.commons.io.file.FileSystemIterator;
  */
 public final class XHE10MarshallerTest
 {
+  private static final Logger LOGGER = LoggerFactory.getLogger (XHE10MarshallerTest.class);
+
   @Test
   public void testReadGood ()
   {
+    LOGGER.info ("Reading good XHE files");
     final XHE10Marshaller aMarshaller = new XHE10Marshaller ();
     for (final File aFile : new FileSystemIterator ("src/test/resources/examples/xhe10/good"))
       if (aFile.isFile ())
@@ -44,6 +49,7 @@ public final class XHE10MarshallerTest
   @Test
   public void testReadBad ()
   {
+    LOGGER.info ("Reading bad XHE files");
     final XHE10Marshaller aMarshaller = new XHE10Marshaller ();
     for (final File aFile : new FileSystemIterator ("src/test/resources/examples/xhe10/bad"))
       if (aFile.isFile ())
