@@ -9,10 +9,7 @@
     <xhb:ID>UUID1</xhb:ID>
     <xhb:CreationDateTime>2020-02-02T20:34:00Z</xhb:CreationDateTime>
     <xha:BusinessScope>
-      <xha:BusinessScopeCriterion>
-        <xhb:BusinessScopeCriterionTypeCode>DC-CountryCode</xhb:BusinessScopeCriterionTypeCode>
-        <xhb:BusinessScopeCriterionValue>AT</xhb:BusinessScopeCriterionValue>
-      </xha:BusinessScopeCriterion>
+      <!-- the DC country code is not used -->
       <xha:BusinessScopeCriterion>
         <xhb:BusinessScopeCriterionTypeCode>DP-CountryCode</xhb:BusinessScopeCriterionTypeCode>
         <xhb:BusinessScopeCriterionValue>PL</xhb:BusinessScopeCriterionValue>
