@@ -23,11 +23,6 @@ import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 import com.helger.xhe.v10.ObjectFactory;
 import com.helger.xhe.v10.XHE10XHEType;
-import com.helger.xml.namespace.MapBasedNamespaceContext;
-import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
-import com.helger.xsds.xades132.CXAdES132;
-import com.helger.xsds.xades141.CXAdES141;
-import com.helger.xsds.xmldsig.CXMLDSig;
 
 /**
  * This is the reader and writer for XHE 1.0 documents. This class may be
@@ -49,17 +44,6 @@ public class XHE10Marshaller extends GenericJAXBMarshaller <XHE10XHEType>
   {
     super (XHE10XHEType.class, bValidationEnabled ? XSDS : null, o -> new ObjectFactory ().createXHE (o));
 
-    final MapBasedNamespaceContext aNSContext = new MapBasedNamespaceContext ();
-    aNSContext.addMapping (CCCTS.DEFAULT_PREFIX, CCCTS.NAMESPACE_URI);
-    aNSContext.addMapping (CXMLDSig.DEFAULT_PREFIX, CXMLDSig.NAMESPACE_URI);
-    aNSContext.addMapping (CXAdES132.DEFAULT_PREFIX, CXAdES132.NAMESPACE_URI);
-    aNSContext.addMapping (CXAdES141.DEFAULT_PREFIX, CXAdES141.NAMESPACE_URI);
-    aNSContext.addMapping (CXHE10.DEFAULT_PREFIX_UNQUALIFIED_DATA_TYPES, CXHE10.NAMESPACE_URI_UNQUALIFIED_DATA_TYPES);
-    aNSContext.addMapping (CXHE10.DEFAULT_PREFIX_QUALIFIED_DATA_TYPES, CXHE10.NAMESPACE_URI_QUALIFIED_DATA_TYPES);
-    aNSContext.addMapping (CXHE10.DEFAULT_PREFIX_BASIC_COMPONENTS, CXHE10.NAMESPACE_URI_BASIC_COMPONENTS);
-    aNSContext.addMapping (CXHE10.DEFAULT_PREFIX_AGGREGATE_COMPONENTS, CXHE10.NAMESPACE_URI_AGGREGATE_COMPONENTS);
-    aNSContext.addMapping (CXHE10.DEFAULT_PREFIX_EXTENSION_COMPONENTS, CXHE10.NAMESPACE_URI_EXTENSION_COMPONENTS);
-    aNSContext.addMapping (CXHE10.DEFAULT_PREFIX_SERVICE_GROUP, CXHE10.NAMESPACE_URI_SERVICE_GROUP);
-    setNamespaceContext (aNSContext);
+    setNamespaceContext (XHE10NamespaceContext.getInstance ());
   }
 }
