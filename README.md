@@ -27,6 +27,9 @@ Add the following to your pom.xml to use this artifact:
 
 # News and noteworthy
 
+* v1.0.2 - 2020-03-30
+    * Fixed an invalid constant name in CXHE10
+    * Extended the API of the JAXB created classes
 * v1.0.1 - 2020-03-04
     * Updated to CS02 - no changes in XSD
     * Added new class `XHE10NamespaceContext`

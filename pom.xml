@@ -179,6 +179,7 @@
         <configuration>
           <bindingDirectory>${basedir}/src/main/jaxb</bindingDirectory>
           <extension>true</extension>
+          <strict>false</strict>
           <args>
             <arg>-no-header</arg>
             <arg>-Xph-default-locale</arg>
@@ -193,6 +194,7 @@
             <arg>-Xph-list-extension</arg>
             <arg>-Xph-csu</arg>
             <arg>-Xph-cloneable2</arg>
+            <arg>-Xph-value-extender</arg>
           </args>
           <episodes>
             <episode>

@@ -52,8 +52,8 @@ public final class CXHE10
   public static final String DEFAULT_PREFIX_AGGREGATE_COMPONENTS = "xha";
   public static final String NAMESPACE_URI_AGGREGATE_COMPONENTS = "oasis-cefact-xhe-1.0-AggregateComponents";
 
-  public static final String DEFAULT_PREFIX_SERVICE_GROUP = "xhe";
-  public static final String NAMESPACE_URI_SERVICE_GROUP = "oasis-cefact-xhe-1.0-ExchangeHeaderEnvelope";
+  public static final String DEFAULT_PREFIX_XHE = "xhe";
+  public static final String NAMESPACE_URI_XHE = "oasis-cefact-xhe-1.0-ExchangeHeaderEnvelope";
 
   @Nonnull
   private static ClassLoader _getCL ()
