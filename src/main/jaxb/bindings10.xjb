@@ -30,26 +30,41 @@
   <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-AggregateComponents-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.xhe.v10.cac" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-BasicComponents-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.xhe.v10.cbc" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-ExtensionComponents-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.xhe.v10.cec" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-QualifiedDataTypes-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.xhe.v10.qdt" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
     </schemaBindings>
   </bindings>
   <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-UnqualifiedDataTypes-1.0.xsd" node="/xsd:schema">
     <schemaBindings>
       <package name="com.helger.xhe.v10.uqdt" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
     </schemaBindings>
   </bindings>
 </bindings>
