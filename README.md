@@ -16,7 +16,7 @@ Add the following to your pom.xml to use this artifact:
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-xhe</artifactId>
-  <version>1.0.2</version>
+  <version>1.1.0</version>
 </dependency>
 ```
 
@@ -27,6 +27,8 @@ Add the following to your pom.xml to use this artifact:
 
 # News and noteworthy
 
+* v1.1.0 - 2020-04-01
+    * Added the `XHE10` prefix to all class names
 * v1.0.2 - 2020-03-30
     * Fixed an invalid constant name in CXHE10
     * Extended the API of the JAXB created classes
