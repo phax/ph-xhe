@@ -19,13 +19,13 @@
     </xha:BusinessScope>
     <xha:FromParty>
       <xha:PartyIdentification>
-        <xhb:ID schemeID="fink-actorid-scheme">by</xhb:ID>
+        <xhb:ID schemeID="fink-actorid-upis">by</xhb:ID>
       </xha:PartyIdentification>
     </xha:FromParty>
     <!-- Mandatory -->
     <xha:ToParty>
       <xha:PartyIdentification>
-        <xhb:ID schemeID="fink-actorid-scheme">hh</xhb:ID>
+        <xhb:ID schemeID="fink-actorid-upis">hh</xhb:ID>
       </xha:PartyIdentification>
     </xha:ToParty>
   </xha:Header>
