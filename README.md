@@ -10,13 +10,13 @@ It requires at least Java 8 to be used.
 
 # Maven usage
 
-Add the following to your pom.xml to use this artifact:
+Add the following to your pom.xml to use this artifact, replacing `x.y.z` with the real version number:
 
 ```xml
 <dependency>
   <groupId>com.helger</groupId>
   <artifactId>ph-xhe</artifactId>
-  <version>1.1.0</version>
+  <version>x.y.z</version>
 </dependency>
 ```
 
@@ -27,6 +27,8 @@ Add the following to your pom.xml to use this artifact:
 
 # News and noteworthy
 
+* v1.1.1 - 2020-05-26
+    * Updated to ph-xsds 2.3.0 (changed Maven groupId)
 * v1.1.0 - 2020-04-01
     * Added the `XHE10` prefix to all class names
 * v1.0.2 - 2020-03-30
