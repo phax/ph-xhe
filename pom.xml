@@ -25,7 +25,7 @@
     <version>1.11.1</version>
   </parent>
   <artifactId>ph-xhe</artifactId>
-  <version>1.1.1-SNAPSHOT</version>
+  <version>1.1.1</version>
   <packaging>bundle</packaging>
   <name>ph-xhe</name>
   <description>Library for reading and writing OASIS xhe documents</description>
@@ -44,7 +44,7 @@
     <connection>scm:git:git@github.com:phax/ph-xhe.git</connection>
     <developerConnection>scm:git:git@github.com:phax/ph-xhe.git</developerConnection>
     <url>http://github.com/phax/ph-xhe</url>
-    <tag>HEAD</tag>
+    <tag>ph-xhe-1.1.1</tag>
   </scm>
 
   <organization>
