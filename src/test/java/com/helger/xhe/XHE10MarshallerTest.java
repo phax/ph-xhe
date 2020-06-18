@@ -18,14 +18,26 @@ package com.helger.xhe;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.util.UUID;
 
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.helger.commons.datetime.PDTFactory;
 import com.helger.commons.io.file.FileSystemIterator;
+import com.helger.commons.mime.CMimeType;
+import com.helger.datetime.util.PDTXMLConverter;
+import com.helger.xhe.v10.XHE10XHEType;
+import com.helger.xhe.v10.cac.XHE10HeaderType;
+import com.helger.xhe.v10.cac.XHE10PartyIdentificationType;
+import com.helger.xhe.v10.cac.XHE10PartyType;
+import com.helger.xhe.v10.cac.XHE10PayloadContentType;
+import com.helger.xhe.v10.cac.XHE10PayloadType;
+import com.helger.xhe.v10.cac.XHE10PayloadsType;
 
 /**
  * Test class for class {@link XHE10Marshaller}.
@@ -54,5 +66,42 @@ public final class XHE10MarshallerTest
     for (final File aFile : new FileSystemIterator ("src/test/resources/examples/xhe10/bad"))
       if (aFile.isFile ())
         assertNull (aFile.getAbsolutePath (), aMarshaller.read (aFile));
+  }
+
+  @Test
+  public void testCreateFromScratch ()
+  {
+    final XHE10Marshaller m = new XHE10Marshaller ();
+    final XHE10XHEType aXHE = new XHE10XHEType ();
+    aXHE.setXHEVersionID ("1.0");
+    {
+      final XHE10HeaderType aHeader = new XHE10HeaderType ();
+      aHeader.setID (UUID.randomUUID ().toString ());
+      aHeader.setCreationDateTime (PDTXMLConverter.getXMLCalendar (PDTFactory.getCurrentLocalDateTime ()));
+      for (int i = 0; i < 3; ++i)
+      {
+        final XHE10PartyType aToParty = new XHE10PartyType ();
+        final XHE10PartyIdentificationType aID = new XHE10PartyIdentificationType ();
+        aID.setID ("id-" + i + "-to");
+        aToParty.addPartyIdentification (aID);
+        aHeader.addToParty (aToParty);
+      }
+      aXHE.setHeader (aHeader);
+    }
+    {
+      final XHE10PayloadsType aPayloads = new XHE10PayloadsType ();
+      for (int i = 0; i < 3; ++i)
+      {
+        final XHE10PayloadType aPayload = new XHE10PayloadType ();
+        aPayload.setContentTypeCode (CMimeType.TEXT_PLAIN.getAsString ());
+        aPayload.setInstanceEncryptionIndicator (false);
+        final XHE10PayloadContentType aContent = new XHE10PayloadContentType ();
+        aContent.addContent ("Test XHE " + i);
+        aPayload.setPayloadContent (aContent);
+        aPayloads.addPayload (aPayload);
+      }
+      aXHE.setPayloads (aPayloads);
+    }
+    assertTrue (m.write (aXHE, new File ("target/dummy.xml")).isSuccess ());
   }
 }
