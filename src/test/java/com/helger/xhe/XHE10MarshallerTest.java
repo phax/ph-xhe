@@ -30,7 +30,6 @@ import org.slf4j.LoggerFactory;
 import com.helger.commons.datetime.PDTFactory;
 import com.helger.commons.io.file.FileSystemIterator;
 import com.helger.commons.mime.CMimeType;
-import com.helger.datetime.util.PDTXMLConverter;
 import com.helger.xhe.v10.XHE10XHEType;
 import com.helger.xhe.v10.cac.XHE10HeaderType;
 import com.helger.xhe.v10.cac.XHE10PartyIdentificationType;
@@ -77,7 +76,7 @@ public final class XHE10MarshallerTest
     {
       final XHE10HeaderType aHeader = new XHE10HeaderType ();
       aHeader.setID (UUID.randomUUID ().toString ());
-      aHeader.setCreationDateTime (PDTXMLConverter.getXMLCalendar (PDTFactory.getCurrentLocalDateTime ()));
+      aHeader.setCreationDateTime (PDTFactory.getCurrentLocalDateTime ());
       for (int i = 0; i < 3; ++i)
       {
         final XHE10PartyType aToParty = new XHE10PartyType ();

@@ -27,6 +27,8 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # News and noteworthy
 
+* v1.1.2 - 2020-08-28
+    * Using Java 8 date and time classes for JAXB created classes
 * v1.1.1 - 2020-05-26
     * Updated to ph-xsds 2.3.0 (changed Maven groupId)
 * v1.1.0 - 2020-04-01

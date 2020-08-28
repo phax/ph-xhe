@@ -17,9 +17,19 @@
     limitations under the License.
 
 -->
-<bindings xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd" version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <globalBindings typesafeEnumMaxMembers="2000" typesafeEnumMemberName="generateError" />
-  <bindings schemaLocation="../resources/schemas/xhe10/XHE-1.0.xsd" node="/xsd:schema">
+<bindings version="2.1" 
+          xmlns="http://java.sun.com/xml/ns/jaxb" 
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" 
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd">
+  <globalBindings typesafeEnumMaxMembers="2000" typesafeEnumMemberName="generateError">
+    <xjc:javaType name="java.time.LocalDateTime" xmlType="xsd:dateTime" adapter="com.helger.jaxb.adapter.AdapterLocalDateTime" />
+    <xjc:javaType name="java.time.LocalDate" xmlType="xsd:date" adapter="com.helger.jaxb.adapter.AdapterLocalDate" />
+    <xjc:javaType name="java.time.LocalTime" xmlType="xsd:time" adapter="com.helger.jaxb.adapter.AdapterLocalTime" />
+    <xjc:javaType name="java.time.Duration" xmlType="xsd:duration" adapter="com.helger.jaxb.adapter.AdapterDuration" />
+  </globalBindings>
+  <bindings schemaLocation="../resources/schemas/xhe10/XHE-1.0.xsd">
     <schemaBindings>
       <package name="com.helger.xhe.v10" />
       <nameXmlTransform>
@@ -27,7 +37,7 @@
       </nameXmlTransform>
     </schemaBindings>
   </bindings>
-  <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-AggregateComponents-1.0.xsd" node="/xsd:schema">
+  <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-AggregateComponents-1.0.xsd">
     <schemaBindings>
       <package name="com.helger.xhe.v10.cac" />
       <nameXmlTransform>
@@ -35,7 +45,7 @@
       </nameXmlTransform>
     </schemaBindings>
   </bindings>
-  <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-BasicComponents-1.0.xsd" node="/xsd:schema">
+  <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-BasicComponents-1.0.xsd">
     <schemaBindings>
       <package name="com.helger.xhe.v10.cbc" />
       <nameXmlTransform>
@@ -43,7 +53,7 @@
       </nameXmlTransform>
     </schemaBindings>
   </bindings>
-  <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-ExtensionComponents-1.0.xsd" node="/xsd:schema">
+  <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-ExtensionComponents-1.0.xsd">
     <schemaBindings>
       <package name="com.helger.xhe.v10.cec" />
       <nameXmlTransform>
@@ -51,7 +61,7 @@
       </nameXmlTransform>
     </schemaBindings>
   </bindings>
-  <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-QualifiedDataTypes-1.0.xsd" node="/xsd:schema">
+  <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-QualifiedDataTypes-1.0.xsd">
     <schemaBindings>
       <package name="com.helger.xhe.v10.qdt" />
       <nameXmlTransform>
@@ -59,7 +69,7 @@
       </nameXmlTransform>
     </schemaBindings>
   </bindings>
-  <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-UnqualifiedDataTypes-1.0.xsd" node="/xsd:schema">
+  <bindings schemaLocation="../resources/schemas/xhe10/fragments/XHE-UnqualifiedDataTypes-1.0.xsd">
     <schemaBindings>
       <package name="com.helger.xhe.v10.uqdt" />
       <nameXmlTransform>
