@@ -27,6 +27,8 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # News and noteworthy
 
+* v1.1.3 - 2020-09-17
+    * Updated to Jakarta JAXB 2.3.3
 * v1.1.2 - 2020-08-28
     * Using Java 8 date and time classes for JAXB created classes
 * v1.1.1 - 2020-05-26
@@ -41,6 +43,7 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
     * Added new class `XHE10NamespaceContext`
 * v1.0.0 - 2019-05-28
     * Initial version
+
 
 ---
 
