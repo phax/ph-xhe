@@ -246,7 +246,6 @@
             <configuration>
               <target>
                 <delete dir="${basedir}/target/generated-sources/xhe10/com/helger/xsds/" />
-                <delete dir="${basedir}/target/generated-sources/xhe11/com/helger/xsds/" />
               </target>
             </configuration>
           </execution>
