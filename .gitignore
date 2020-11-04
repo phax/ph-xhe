@@ -5,9 +5,11 @@
 *.war
 *.ear
 
+bin/
 target/
-/**/.pmd
-/**/*.iml
-/.settings/ 
-/.project 
-/.classpath 
+.pmd
+.iml
+.settings/ 
+.project 
+.classpath 
+zz
