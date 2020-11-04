@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.xhe.v10_cs02;
+package com.helger.xhe.v10_cs03;
 
 import javax.annotation.Nonnull;
 
@@ -26,7 +26,7 @@ import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
 /**
- * The namespace context for XHE 1.0 CS02 to be used as the namespace prefix
+ * The namespace context for XHE 1.0 CS03 to be used as the namespace prefix
  * mapper.
  *
  * @author Philip Helger

@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.xhe.v10_cs02;
+package com.helger.xhe.v10_cs03;
 
 import javax.annotation.concurrent.NotThreadSafe;
 
@@ -23,7 +23,7 @@ import com.helger.commons.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 
 /**
- * This is the reader and writer for XHE 1.0 CS02 documents. This class may be
+ * This is the reader and writer for XHE 1.0 CS03 documents. This class may be
  * derived to override protected methods from {@link GenericJAXBMarshaller}.
  *
  * @author Philip Helger

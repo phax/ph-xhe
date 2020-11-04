@@ -164,18 +164,35 @@
         <version>0.14.0</version>
         <executions>
           <execution>
-            <id>xhe10</id>
+            <id>xhe10-cs02</id>
             <goals>
               <goal>generate</goal>
             </goals>
             <configuration>
-              <generateDirectory>${project.build.directory}/generated-sources/xhe10</generateDirectory>
+              <generateDirectory>${project.build.directory}/generated-sources/xhe10-cs02</generateDirectory>
               <schemaDirectory>${basedir}/src/main/resources/schemas/xhe10-cs02</schemaDirectory>
               <schemaIncludes>
                 <schemaInclude>XHE-1.0.xsd</schemaInclude>
               </schemaIncludes>
               <bindingIncludes>
                 <bindingInclude>bindings10-cs02.xjb</bindingInclude>
+              </bindingIncludes>
+              <catalog>${basedir}/src/main/jaxb/catalog.txt</catalog>
+            </configuration>
+          </execution>
+          <execution>
+            <id>xhe10-cs03</id>
+            <goals>
+              <goal>generate</goal>
+            </goals>
+            <configuration>
+              <generateDirectory>${project.build.directory}/generated-sources/xhe10-cs03</generateDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/schemas/xhe10-cs03</schemaDirectory>
+              <schemaIncludes>
+                <schemaInclude>XHE-1.0.xsd</schemaInclude>
+              </schemaIncludes>
+              <bindingIncludes>
+                <bindingInclude>bindings10-cs03.xjb</bindingInclude>
               </bindingIncludes>
               <catalog>${basedir}/src/main/jaxb/catalog.txt</catalog>
             </configuration>
@@ -245,7 +262,8 @@
             </goals>
             <configuration>
               <target>
-                <delete dir="${basedir}/target/generated-sources/xhe10/com/helger/xsds/" />
+                <delete dir="${basedir}/target/generated-sources/xhe10-cs02/com/helger/xsds/" />
+                <delete dir="${basedir}/target/generated-sources/xhe10-cs03/com/helger/xsds/" />
               </target>
             </configuration>
           </execution>

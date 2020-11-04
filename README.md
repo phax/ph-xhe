@@ -22,11 +22,16 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # References
 
+* [OASIS Exchange Header Envelope Version 1.0 CSD 03](https://docs.oasis-open.org/bdxr/xhe/v1.0/csd03/xhe-v1.0-csd03-oasis.html)
 * [OASIS Exchange Header Envelope Version 1.0 CS 02](https://docs.oasis-open.org/bdxr/xhe/v1.0/cs02/xhe-v1.0-cs02-oasis.html)
 * [OASIS Exchange Header Envelope Version 1.0 CS 01](https://docs.oasis-open.org/bdxr/xhe/v1.0/cs01/xhe-v1.0-cs01-oasis.html)
 
 # News and noteworthy
 
+* v2.0.0 - 2020-11-04
+    * Added support for XHE 1.0 CS03 - just changed namespace, hence not backwards compatible. The support for the old CS02 is still contained.
+    * The package `com.helger.xhe` was renamed to `com.helger.xhe.v10_cs02`
+    * The new package `com.helger.xhe.v10_cs03` for CS03 was added
 * v1.1.3 - 2020-09-17
     * Updated to Jakarta JAXB 2.3.3
 * v1.1.2 - 2020-08-28
@@ -43,7 +48,6 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
     * Added new class `XHE10NamespaceContext`
 * v1.0.0 - 2019-05-28
     * Initial version
-
 
 ---
 

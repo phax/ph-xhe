@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.helger.xhe.v10_cs02;
+package com.helger.xhe.v10_cs03;
 
 import javax.annotation.Nonnull;
 import javax.annotation.concurrent.Immutable;
@@ -30,7 +30,7 @@ import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
 /**
- * Contains all the constants for XHE 1.0 CS02 handling.
+ * Contains all the constants for XHE 1.0 CS03 handling.
  *
  * @author Philip Helger
  */
@@ -38,22 +38,22 @@ import com.helger.xsds.xmldsig.CXMLDSig;
 public final class CXHE10
 {
   public static final String DEFAULT_PREFIX_UNQUALIFIED_DATA_TYPES = "udt";
-  public static final String NAMESPACE_URI_UNQUALIFIED_DATA_TYPES = "oasis-cefact-xhe-1.0-UnqualifiedDataTypes";
+  public static final String NAMESPACE_URI_UNQUALIFIED_DATA_TYPES = "http://docs.oasis-open.org/bdxr/ns/XHE/1/UnqualifiedDataTypes";
 
   public static final String DEFAULT_PREFIX_QUALIFIED_DATA_TYPES = "qdt";
-  public static final String NAMESPACE_URI_QUALIFIED_DATA_TYPES = "oasis-cefact-xhe-1.0-QualifiedDataTypes";
+  public static final String NAMESPACE_URI_QUALIFIED_DATA_TYPES = "http://docs.oasis-open.org/bdxr/ns/XHE/1/QualifiedDataTypes";
 
   public static final String DEFAULT_PREFIX_BASIC_COMPONENTS = "xhb";
-  public static final String NAMESPACE_URI_BASIC_COMPONENTS = "oasis-cefact-xhe-1.0-BasicComponents";
+  public static final String NAMESPACE_URI_BASIC_COMPONENTS = "http://docs.oasis-open.org/bdxr/ns/XHE/1/BasicComponents";
 
   public static final String DEFAULT_PREFIX_EXTENSION_COMPONENTS = "ext";
-  public static final String NAMESPACE_URI_EXTENSION_COMPONENTS = "oasis-cefact-xhe-1.0-ExtensionComponents";
+  public static final String NAMESPACE_URI_EXTENSION_COMPONENTS = "http://docs.oasis-open.org/bdxr/ns/XHE/1/ExtensionComponents";
 
   public static final String DEFAULT_PREFIX_AGGREGATE_COMPONENTS = "xha";
-  public static final String NAMESPACE_URI_AGGREGATE_COMPONENTS = "oasis-cefact-xhe-1.0-AggregateComponents";
+  public static final String NAMESPACE_URI_AGGREGATE_COMPONENTS = "http://docs.oasis-open.org/bdxr/ns/XHE/1/AggregateComponents";
 
   public static final String DEFAULT_PREFIX_XHE = "xhe";
-  public static final String NAMESPACE_URI_XHE = "oasis-cefact-xhe-1.0-ExchangeHeaderEnvelope";
+  public static final String NAMESPACE_URI_XHE = "http://docs.oasis-open.org/bdxr/ns/XHE/1/ExchangeHeaderEnvelope";
 
   @Nonnull
   private static ClassLoader _getCL ()
@@ -65,28 +65,28 @@ public final class CXHE10
   @Nonnull
   public static ClassPathResource getXSDResourceUnqualifiedDataTypes ()
   {
-    return new ClassPathResource ("/schemas/xhe10-cs02/fragments/XHE-UnqualifiedDataTypes-1.0.xsd", _getCL ());
+    return new ClassPathResource ("/schemas/xhe10-cs03/fragments/XHE-UnqualifiedDataTypes-1.0.xsd", _getCL ());
   }
 
   // Note: requires UnqualifiedDataTypes
   @Nonnull
   public static ClassPathResource getXSDResourceQualifiedDataTypes ()
   {
-    return new ClassPathResource ("/schemas/xhe10-cs02/fragments/XHE-QualifiedDataTypes-1.0.xsd", _getCL ());
+    return new ClassPathResource ("/schemas/xhe10-cs03/fragments/XHE-QualifiedDataTypes-1.0.xsd", _getCL ());
   }
 
   // Note: requires QualifiedDataTypes, UnqualifiedDataTypes
   @Nonnull
   public static ClassPathResource getXSDResourceBasicComponents ()
   {
-    return new ClassPathResource ("/schemas/xhe10-cs02/fragments/XHE-BasicComponents-1.0.xsd", _getCL ());
+    return new ClassPathResource ("/schemas/xhe10-cs03/fragments/XHE-BasicComponents-1.0.xsd", _getCL ());
   }
 
   // Note: requires Xades 1.3.2, Xades 1.4.1
   @Nonnull
   public static ClassPathResource getXSDResourceExtensionContentDataType ()
   {
-    return new ClassPathResource ("/schemas/xhe10-cs02/fragments/XHE-ExtensionContentDataType-1.0.xsd", _getCL ());
+    return new ClassPathResource ("/schemas/xhe10-cs03/fragments/XHE-ExtensionContentDataType-1.0.xsd", _getCL ());
   }
 
   // Note: requires UnqualifiedDataTypes, BasicComponents,
@@ -94,20 +94,20 @@ public final class CXHE10
   @Nonnull
   public static ClassPathResource getXSDResourceExtensionComponents ()
   {
-    return new ClassPathResource ("/schemas/xhe10-cs02/fragments/XHE-ExtensionComponents-1.0.xsd", _getCL ());
+    return new ClassPathResource ("/schemas/xhe10-cs03/fragments/XHE-ExtensionComponents-1.0.xsd", _getCL ());
   }
 
   @Nonnull
   public static ClassPathResource getXSDResourcePayloadContentDataType ()
   {
-    return new ClassPathResource ("/schemas/xhe10-cs02/fragments/XHE-PayloadContentDataType-1.0.xsd", _getCL ());
+    return new ClassPathResource ("/schemas/xhe10-cs03/fragments/XHE-PayloadContentDataType-1.0.xsd", _getCL ());
   }
 
   // Note: requires BasicComponents, PayloadContentDataType
   @Nonnull
   public static ClassPathResource getXSDResourceAggregateComponents ()
   {
-    return new ClassPathResource ("/schemas/xhe10-cs02/fragments/XHE-AggregateComponents-1.0.xsd", _getCL ());
+    return new ClassPathResource ("/schemas/xhe10-cs03/fragments/XHE-AggregateComponents-1.0.xsd", _getCL ());
   }
 
   /**
@@ -134,7 +134,7 @@ public final class CXHE10
   @Nonnull
   public static ClassPathResource getXSDXHE10 ()
   {
-    return new ClassPathResource ("/schemas/xhe10-cs02/XHE-1.0.xsd", _getCL ());
+    return new ClassPathResource ("/schemas/xhe10-cs03/XHE-1.0.xsd", _getCL ());
   }
 
   @Nonnull
