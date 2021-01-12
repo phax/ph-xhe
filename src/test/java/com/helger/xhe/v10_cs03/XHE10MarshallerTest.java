@@ -53,7 +53,10 @@ public final class XHE10MarshallerTest
     final XHE10Marshaller aMarshaller = new XHE10Marshaller ();
     for (final File aFile : new FileSystemIterator ("src/test/resources/examples/xhe10-cs03/good"))
       if (aFile.isFile ())
+      {
+        LOGGER.info ("  " + aFile.getName ());
         assertNotNull (aFile.getAbsolutePath (), aMarshaller.read (aFile));
+      }
   }
 
   @Test
@@ -63,7 +66,10 @@ public final class XHE10MarshallerTest
     final XHE10Marshaller aMarshaller = new XHE10Marshaller ();
     for (final File aFile : new FileSystemIterator ("src/test/resources/examples/xhe10-cs03/bad"))
       if (aFile.isFile ())
+      {
+        LOGGER.info ("  " + aFile.getName ());
         assertNull (aFile.getAbsolutePath (), aMarshaller.read (aFile));
+      }
   }
 
   @Test
