@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           Exchange Header Envelope (XHE) 1.0 CSD03
+  Library:           Exchange Header Envelope (XHE) 1.0 CS03
                      http://www.unece.org/cefact
-                     https://docs.oasis-open.org/bdxr/xhe/v1.0/csd03/
-  Release Date:      07 October 2020
+                     https://docs.oasis-open.org/bdxr/xhe/v1.0/cs03/
+  Release Date:      13 December 2020
   Module:            xsdrt/fragments/XHE-AggregateComponents-1.0.xsd
-  Generated on:      2020-10-04 19:23z
+  Generated on:      2020-12-15 02:44z
   Copyright (c) UN/CEFACT 2020. All Rights Reserved.
   Copyright (c) OASIS Open 2020. All Rights Reserved.
 -->

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           Exchange Header Envelope (XHE) 1.0 CSD03
+  Library:           Exchange Header Envelope (XHE) 1.0 CS03
                      http://www.unece.org/cefact
-                     https://docs.oasis-open.org/bdxr/xhe/v1.0/csd03/
-  Release Date:      07 October 2020
+                     https://docs.oasis-open.org/bdxr/xhe/v1.0/cs03/
+  Release Date:      13 December 2020
   Module:            XHE-PayloadContentDataType-1.0.xsd
   Generated on:      2017-10-31 17:00(UTC)
   Copyright (c) UN/CEFACT 2020. All Rights Reserved.

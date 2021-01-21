@@ -22,12 +22,14 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # References
 
-* [OASIS Exchange Header Envelope Version 1.0 CSD 03](https://docs.oasis-open.org/bdxr/xhe/v1.0/csd03/xhe-v1.0-csd03-oasis.html)
+* [OASIS Exchange Header Envelope Version 1.0 CS 03](https://docs.oasis-open.org/bdxr/xhe/v1.0/cs03/xhe-v1.0-cs03-oasis.html)
 * [OASIS Exchange Header Envelope Version 1.0 CS 02](https://docs.oasis-open.org/bdxr/xhe/v1.0/cs02/xhe-v1.0-cs02-oasis.html)
 * [OASIS Exchange Header Envelope Version 1.0 CS 01](https://docs.oasis-open.org/bdxr/xhe/v1.0/cs01/xhe-v1.0-cs01-oasis.html)
 
 # News and noteworthy
 
+* v2.0.1 - work in progress
+    * Updated the XSDs to XHE 1.0 CS 03 - no changes except for XSD comments
 * v2.0.0 - 2020-11-04
     * Added support for XHE 1.0 CS03 - just changed namespace, hence not backwards compatible. The support for the old CS02 is still contained.
     * The package `com.helger.xhe` was renamed to `com.helger.xhe.v10_cs02`
