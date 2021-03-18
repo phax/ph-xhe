@@ -30,6 +30,7 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 * v2.0.1 - work in progress
     * Updated the XSDs to XHE 1.0 CS 03 - no changes except for XSD comments
+    * Changed the JAXB binding for `xs:dateTime` to `java.time.OffsetDateTime`
 * v2.0.0 - 2020-11-04
     * Added support for XHE 1.0 CS03 - just changed namespace, hence not backwards compatible. The support for the old CS02 is still contained.
     * The package `com.helger.xhe` was renamed to `com.helger.xhe.v10_cs02`
