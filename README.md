@@ -28,7 +28,8 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # News and noteworthy
 
-* v2.0.1 - work in progress
+* v2.0.1 - 2021-03-18
+    * Updated to ph-commons 9.5.5
     * Updated the XSDs to XHE 1.0 CS 03 - no changes except for XSD comments
     * Changed the JAXB binding for `xs:dateTime` to `java.time.OffsetDateTime`
 * v2.0.0 - 2020-11-04
