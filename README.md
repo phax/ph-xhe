@@ -28,6 +28,8 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # News and noteworthy
 
+* v2.0.2 - work in progress
+    * Updated to ph-commons 10
 * v2.0.1 - 2021-03-18
     * Updated to ph-commons 9.5.5
     * Updated the XSDs to XHE 1.0 CS 03 - no changes except for XSD comments
