@@ -75,7 +75,7 @@ public final class XHE10MarshallerTest
     {
       final XHE10HeaderType aHeader = new XHE10HeaderType ();
       aHeader.setID (UUID.randomUUID ().toString ());
-      aHeader.setCreationDateTime (PDTFactory.getCurrentOffsetDateTime ());
+      aHeader.setCreationDateTime (PDTFactory.getCurrentXMLOffsetDateTime ());
       for (int i = 0; i < 3; ++i)
       {
         final XHE10PartyType aToParty = new XHE10PartyType ();
