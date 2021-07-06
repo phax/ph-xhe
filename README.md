@@ -1,7 +1,7 @@
 # ph-xhe
 
 OASIS XHE (Exchange Header Envelope) Java wrapper library.
-It supports simple reading and writing of XHE 1.0 documents.
+It supports simple reading and writing of XHE 1.0 documents. This library supports both the old CS02 as well as the final CS03 version of XHE 1.0.
 It allows conversion between Java domain objects and XML representations.
 
 It is licensed under Apache 2.0 license.
@@ -28,6 +28,8 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # News and noteworthy
 
+* v2.2.1 - 2021-07-06
+    * Generating the JAXB stuff in a single execution to create a single episode file
 * v2.2.0 - 2021-05-02
     * Updated to ph-commons 10.1
 * v2.1.0 - 2021-03-21

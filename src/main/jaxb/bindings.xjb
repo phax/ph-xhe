@@ -28,6 +28,7 @@
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetDate"     xmlType="xsd:date"     adapter="com.helger.jaxb.adapter.AdapterXMLOffsetDate" />
     <xjc:javaType name="com.helger.commons.datetime.XMLOffsetTime"     xmlType="xsd:time"     adapter="com.helger.jaxb.adapter.AdapterXMLOffsetTime" />
   </globalBindings>
+  <!-- 1.0 CS02 -->
   <bindings schemaLocation="../resources/schemas/xhe10-cs02/XHE-1.0.xsd">
     <schemaBindings>
       <package name="com.helger.xhe.v10_cs02" />
@@ -71,6 +72,55 @@
   <bindings schemaLocation="../resources/schemas/xhe10-cs02/fragments/XHE-UnqualifiedDataTypes-1.0.xsd">
     <schemaBindings>
       <package name="com.helger.xhe.v10_cs02.uqdt" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
+    </schemaBindings>
+  </bindings>
+  <!-- 1.0 CS03 -->
+  <bindings schemaLocation="../resources/schemas/xhe10-cs03/XHE-1.0.xsd">
+    <schemaBindings>
+      <package name="com.helger.xhe.v10_cs03" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
+    </schemaBindings>
+  </bindings>
+  <bindings schemaLocation="../resources/schemas/xhe10-cs03/fragments/XHE-AggregateComponents-1.0.xsd">
+    <schemaBindings>
+      <package name="com.helger.xhe.v10_cs03.cac" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
+    </schemaBindings>
+  </bindings>
+  <bindings schemaLocation="../resources/schemas/xhe10-cs03/fragments/XHE-BasicComponents-1.0.xsd">
+    <schemaBindings>
+      <package name="com.helger.xhe.v10_cs03.cbc" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
+    </schemaBindings>
+  </bindings>
+  <bindings schemaLocation="../resources/schemas/xhe10-cs03/fragments/XHE-ExtensionComponents-1.0.xsd">
+    <schemaBindings>
+      <package name="com.helger.xhe.v10_cs03.cec" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
+    </schemaBindings>
+  </bindings>
+  <bindings schemaLocation="../resources/schemas/xhe10-cs03/fragments/XHE-QualifiedDataTypes-1.0.xsd">
+    <schemaBindings>
+      <package name="com.helger.xhe.v10_cs03.qdt" />
+      <nameXmlTransform>
+        <typeName prefix="XHE10" />
+      </nameXmlTransform>
+    </schemaBindings>
+  </bindings>
+  <bindings schemaLocation="../resources/schemas/xhe10-cs03/fragments/XHE-UnqualifiedDataTypes-1.0.xsd">
+    <schemaBindings>
+      <package name="com.helger.xhe.v10_cs03.uqdt" />
       <nameXmlTransform>
         <typeName prefix="XHE10" />
       </nameXmlTransform>
