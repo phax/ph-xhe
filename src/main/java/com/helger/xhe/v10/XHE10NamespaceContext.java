@@ -37,7 +37,7 @@ public class XHE10NamespaceContext extends MapBasedNamespaceContext
 {
   private static final class SingletonHolder
   {
-    static final XHE10NamespaceContext s_aInstance = new XHE10NamespaceContext ();
+    static final XHE10NamespaceContext INSTANCE = new XHE10NamespaceContext ();
   }
 
   protected XHE10NamespaceContext ()
@@ -57,6 +57,6 @@ public class XHE10NamespaceContext extends MapBasedNamespaceContext
   @Nonnull
   public static XHE10NamespaceContext getInstance ()
   {
-    return SingletonHolder.s_aInstance;
+    return SingletonHolder.INSTANCE;
   }
 }

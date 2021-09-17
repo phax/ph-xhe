@@ -147,7 +147,7 @@ public final class CXHE10
   }
 
   @PresentForCodeCoverage
-  private static final CXHE10 s_aInstance = new CXHE10 ();
+  private static final CXHE10 INSTANCE = new CXHE10 ();
 
   private CXHE10 ()
   {}
