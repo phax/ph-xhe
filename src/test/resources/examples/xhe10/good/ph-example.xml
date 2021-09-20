@@ -19,13 +19,13 @@
     </xha:BusinessScope>
     <xha:FromParty>
       <xha:PartyIdentification>
-        <xhb:ID schemeID="fink-actorid-upis">by</xhb:ID>
+        <xhb:ID schemeID="fink-postfach-ref">by/hh/54321</xhb:ID>
       </xha:PartyIdentification>
     </xha:FromParty>
     <!-- Mandatory -->
     <xha:ToParty>
       <xha:PartyIdentification>
-        <xhb:ID schemeID="fink-actorid-upis">hh</xhb:ID>
+        <xhb:ID schemeID="fink-postfach-ref">hh/by/12345</xhb:ID>
       </xha:PartyIdentification>
     </xha:ToParty>
   </xha:Header>
