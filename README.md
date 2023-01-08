@@ -6,7 +6,7 @@ It allows conversion between Java domain objects and XML representations.
 
 It is licensed under Apache 2.0 license.
 
-It requires at least Java 8 to be used.
+It requires at least Java 11 to be used.
 
 # Maven usage
 
@@ -29,6 +29,10 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # News and noteworthy
 
+* v4.0.0 - 2023-01-08
+    * Using Java 11 as the baseline
+    * Updated to ph-commons 11
+    * Using JAXB 4.0 as the baseline
 * v3.0.0 - 2021-09-17
     * Updated to XHE 1.0 OS
     * Removed the separate handling of CS02 and CS03 packages - only the 1.0 OS version is supported
