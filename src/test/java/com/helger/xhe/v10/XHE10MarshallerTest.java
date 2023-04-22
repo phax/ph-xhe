@@ -51,7 +51,7 @@ public final class XHE10MarshallerTest
   {
     LOGGER.info ("Reading good XHE files");
     final XHE10Marshaller aMarshaller = new XHE10Marshaller ();
-    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/xhe10/good"))
+    for (final File aFile : new FileSystemIterator ("src/test/resources/external/examples/xhe10/good"))
       if (aFile.isFile ())
       {
         LOGGER.info ("  " + aFile.getName ());
@@ -64,7 +64,7 @@ public final class XHE10MarshallerTest
   {
     LOGGER.info ("Reading bad XHE files");
     final XHE10Marshaller aMarshaller = new XHE10Marshaller ();
-    for (final File aFile : new FileSystemIterator ("src/test/resources/examples/xhe10/bad"))
+    for (final File aFile : new FileSystemIterator ("src/test/resources/external/examples/xhe10/bad"))
       if (aFile.isFile ())
       {
         LOGGER.info ("  " + aFile.getName ());
