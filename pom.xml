@@ -157,19 +157,6 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>com.mycila</groupId>
-        <artifactId>license-maven-plugin</artifactId>
-        <configuration>
-          <excludes>
-            <exclude>src/main/resources/schemas/**</exclude>
-            <exclude>src/test/resources/examples/**</exclude>
-            <exclude>**/LICENSE</exclude>
-            <exclude>**/NOTICE</exclude>
-            <exclude>**/*.txt</exclude>
-          </excludes>
-        </configuration>
-      </plugin>
-      <plugin>
         <groupId>${jaxb-plugin.group}</groupId>
         <artifactId>${jaxb-plugin.artifact}</artifactId>
         <version>${jaxb-plugin.version}</version>
@@ -180,7 +167,7 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <schemaDirectory>${basedir}/src/main/resources/schemas</schemaDirectory>
+              <schemaDirectory>${basedir}/src/main/resources/external/schemas</schemaDirectory>
               <schemaIncludes>
                 <schemaInclude>xhe10/XHE-1.0.xsd</schemaInclude>
               </schemaIncludes>

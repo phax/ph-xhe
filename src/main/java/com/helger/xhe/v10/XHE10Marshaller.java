@@ -40,7 +40,7 @@ public class XHE10Marshaller extends GenericJAXBMarshaller <XHE10XHEType>
 
   public XHE10Marshaller (final boolean bValidationEnabled)
   {
-    super (XHE10XHEType.class, bValidationEnabled ? XSDS : null, o -> new ObjectFactory ().createXHE (o));
+    super (XHE10XHEType.class, bValidationEnabled ? XSDS : null, new ObjectFactory ()::createXHE);
 
     setNamespaceContext (XHE10NamespaceContext.getInstance ());
   }
