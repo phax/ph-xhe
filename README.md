@@ -1,5 +1,9 @@
 # ph-xhe
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.helger/ph-xhe/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.helger/ph-xhe) 
+[![javadoc](https://javadoc.io/badge2/com.helger/ph-xhe/javadoc.svg)](https://javadoc.io/doc/com.helger/ph-xhe)
+[![CodeCov](https://codecov.io/gh/phax/ph-xhe/branch/master/graph/badge.svg)](https://codecov.io/gh/phax/ph-xhe)
+
 OASIS XHE (Exchange Header Envelope) Java wrapper library.
 It supports simple reading and writing of XHE 1.0 documents. This library supports the final version of XHE 1.0 (older versions support previous CS versions).
 It allows conversion between Java domain objects and XML representations.
