@@ -152,7 +152,13 @@
         <configuration>
           <instructions>
             <Automatic-Module-Name>com.helger.xhe</Automatic-Module-Name>
-            <Export-Package>com.helger.xhe.*</Export-Package>
+            <Export-Package>
+              com.helger.xhe.v10,
+              com.helger.xhe.v10.cac,
+              com.helger.xhe.v10.cbc,
+              com.helger.xhe.v10.cec,
+              com.helger.xhe.v10.uqdt
+            </Export-Package>
             <Import-Package>!javax.annotation.*,*</Import-Package>
           </instructions>
         </configuration>
