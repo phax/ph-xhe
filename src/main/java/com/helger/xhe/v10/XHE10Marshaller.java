@@ -38,6 +38,15 @@ public class XHE10Marshaller extends GenericJAXBMarshaller <XHE10XHEType>
     this (true);
   }
 
+  /**
+   * Deprecated constructor
+   *
+   * @param bValidationEnabled
+   *        <code>true</code> to enable XSD validation, <code>false</code> to
+   *        disable it.
+   * @deprecated Use {@link #setUseSchema(boolean)} instead
+   */
+  @Deprecated (forRemoval = true, since = "5.0.2")
   public XHE10Marshaller (final boolean bValidationEnabled)
   {
     super (XHE10XHEType.class, bValidationEnabled ? XSDS : null, new ObjectFactory ()::createXHE);
