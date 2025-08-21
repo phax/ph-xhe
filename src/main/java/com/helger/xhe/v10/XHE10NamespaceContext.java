@@ -16,14 +16,14 @@
  */
 package com.helger.xhe.v10;
 
-import javax.annotation.Nonnull;
-
-import com.helger.commons.annotation.Singleton;
+import com.helger.annotation.misc.Singleton;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
 import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
+
+import jakarta.annotation.Nonnull;
 
 /**
  * The namespace context for XHE 1.0 CS03 to be used as the namespace prefix

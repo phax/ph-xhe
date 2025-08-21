@@ -27,9 +27,9 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.helger.commons.datetime.PDTFactory;
-import com.helger.commons.io.file.FileSystemIterator;
-import com.helger.commons.mime.CMimeType;
+import com.helger.datetime.helper.PDTFactory;
+import com.helger.io.file.FileSystemIterator;
+import com.helger.mime.CMimeType;
 import com.helger.xhe.v10.cac.XHE10HeaderType;
 import com.helger.xhe.v10.cac.XHE10PartyIdentificationType;
 import com.helger.xhe.v10.cac.XHE10PartyType;
