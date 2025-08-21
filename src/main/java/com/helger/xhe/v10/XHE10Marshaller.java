@@ -22,8 +22,8 @@ import com.helger.io.resource.ClassPathResource;
 import com.helger.jaxb.GenericJAXBMarshaller;
 
 /**
- * This is the reader and writer for XHE 1.0 CS03 documents. This class may be
- * derived to override protected methods from {@link GenericJAXBMarshaller}.
+ * This is the reader and writer for XHE 1.0 CS03 documents. This class may be derived to override
+ * protected methods from {@link GenericJAXBMarshaller}.
  *
  * @author Philip Helger
  */
@@ -34,21 +34,7 @@ public class XHE10Marshaller extends GenericJAXBMarshaller <XHE10XHEType>
 
   public XHE10Marshaller ()
   {
-    this (true);
-  }
-
-  /**
-   * Deprecated constructor
-   *
-   * @param bValidationEnabled
-   *        <code>true</code> to enable XSD validation, <code>false</code> to
-   *        disable it.
-   * @deprecated Use {@link #setUseSchema(boolean)} instead
-   */
-  @Deprecated (forRemoval = true, since = "5.0.2")
-  public XHE10Marshaller (final boolean bValidationEnabled)
-  {
-    super (XHE10XHEType.class, bValidationEnabled ? XSDS : null, new ObjectFactory ()::createXHE);
+    super (XHE10XHEType.class, XSDS, new ObjectFactory ()::createXHE);
 
     setNamespaceContext (XHE10NamespaceContext.getInstance ());
   }

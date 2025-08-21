@@ -36,6 +36,7 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 v5.0.0 - work in progress
 * Requires Java 17 as the minimum version
 * Updated to ph-commons 12.0.0
+* Removed all deprecated methods marked for removal
 
 v4.0.2 - 2025-02-20
 * Switched JAXB Maven plugin to `org.jvnet.jaxb:jaxb-maven-plugin` 
