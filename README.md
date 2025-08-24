@@ -10,7 +10,7 @@ It allows conversion between Java domain objects and XML representations.
 
 It is licensed under Apache 2.0 license.
 
-It requires at least Java 11 to be used.
+It requires at least Java 17 to be used.
 
 # Maven usage
 
@@ -33,7 +33,7 @@ Add the following to your pom.xml to use this artifact, replacing `x.y.z` with t
 
 # News and noteworthy
 
-v5.0.0 - work in progress
+v5.0.0 - 2025-08-24
 * Requires Java 17 as the minimum version
 * Updated to ph-commons 12.0.0
 * Removed all deprecated methods marked for removal
