@@ -16,6 +16,8 @@
  */
 package com.helger.xhe.v10;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.concurrent.Immutable;
 import com.helger.annotation.style.PresentForCodeCoverage;
 import com.helger.annotation.style.ReturnsMutableCopy;
@@ -26,8 +28,6 @@ import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
 import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * Contains all the constants for XHE 1.0 CS03 handling.
@@ -61,7 +61,7 @@ public final class CXHE10
   private CXHE10 ()
   {}
 
-  @Nonnull
+  @NonNull
   private static ClassLoader _getCL ()
   {
     return CXHE10.class.getClassLoader ();
@@ -70,28 +70,28 @@ public final class CXHE10
   private static final String PREFIX = "external/schemas/";
 
   // Note: requires CCTS Schema Module
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceUnqualifiedDataTypes ()
   {
     return new ClassPathResource (PREFIX + "xhe10/fragments/XHE-UnqualifiedDataTypes-1.0.xsd", _getCL ());
   }
 
   // Note: requires UnqualifiedDataTypes
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceQualifiedDataTypes ()
   {
     return new ClassPathResource (PREFIX + "xhe10/fragments/XHE-QualifiedDataTypes-1.0.xsd", _getCL ());
   }
 
   // Note: requires QualifiedDataTypes, UnqualifiedDataTypes
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceBasicComponents ()
   {
     return new ClassPathResource (PREFIX + "xhe10/fragments/XHE-BasicComponents-1.0.xsd", _getCL ());
   }
 
   // Note: requires Xades 1.3.2, Xades 1.4.1
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceExtensionContentDataType ()
   {
     return new ClassPathResource (PREFIX + "xhe10/fragments/XHE-ExtensionContentDataType-1.0.xsd", _getCL ());
@@ -99,20 +99,20 @@ public final class CXHE10
 
   // Note: requires UnqualifiedDataTypes, BasicComponents,
   // ExtensionContentDataType
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceExtensionComponents ()
   {
     return new ClassPathResource (PREFIX + "xhe10/fragments/XHE-ExtensionComponents-1.0.xsd", _getCL ());
   }
 
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourcePayloadContentDataType ()
   {
     return new ClassPathResource (PREFIX + "xhe10/fragments/XHE-PayloadContentDataType-1.0.xsd", _getCL ());
   }
 
   // Note: requires BasicComponents, PayloadContentDataType
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDResourceAggregateComponents ()
   {
     return new ClassPathResource (PREFIX + "xhe10/fragments/XHE-AggregateComponents-1.0.xsd", _getCL ());
@@ -122,7 +122,7 @@ public final class CXHE10
    * @return A list of all includes in the correct order. Never
    *         <code>null</code>.
    */
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDIncludes ()
   {
@@ -139,13 +139,13 @@ public final class CXHE10
 
   // Note: requires AggregateComponents, BasicComponents, ExtensionComponents,
   // XMLDsig
-  @Nonnull
+  @NonNull
   public static ClassPathResource getXSDXHE10 ()
   {
     return new ClassPathResource (PREFIX + "xhe10/XHE-1.0.xsd", _getCL ());
   }
 
-  @Nonnull
+  @NonNull
   @ReturnsMutableCopy
   public static ICommonsList <ClassPathResource> getAllXSDXHE10 ()
   {

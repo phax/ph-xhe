@@ -16,14 +16,14 @@
  */
 package com.helger.xhe.v10;
 
+import org.jspecify.annotations.NonNull;
+
 import com.helger.annotation.misc.Singleton;
 import com.helger.xml.namespace.MapBasedNamespaceContext;
 import com.helger.xsds.ccts.cct.schemamodule.CCCTS;
 import com.helger.xsds.xades132.CXAdES132;
 import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
-
-import jakarta.annotation.Nonnull;
 
 /**
  * The namespace context for XHE 1.0 CS03 to be used as the namespace prefix
@@ -54,7 +54,7 @@ public class XHE10NamespaceContext extends MapBasedNamespaceContext
     addMapping (CXHE10.DEFAULT_PREFIX_XHE, CXHE10.NAMESPACE_URI_XHE);
   }
 
-  @Nonnull
+  @NonNull
   public static XHE10NamespaceContext getInstance ()
   {
     return SingletonHolder.INSTANCE;
