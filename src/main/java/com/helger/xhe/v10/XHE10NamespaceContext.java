@@ -26,8 +26,7 @@ import com.helger.xsds.xades141.CXAdES141;
 import com.helger.xsds.xmldsig.CXMLDSig;
 
 /**
- * The namespace context for XHE 1.0 CS03 to be used as the namespace prefix
- * mapper.
+ * The namespace context for XHE 1.0 CS03 to be used as the namespace prefix mapper.
  *
  * @author Philip Helger
  * @since 1.0.1
